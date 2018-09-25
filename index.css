@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  background-color: black;
+}
+
+@media (min-width: 600px) {
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    flex-direction: row;
+  }
+  
+  .part {
+    flex-basis: 0;
+  }
+  
+  .left {
+    flex-grow: 1;
+  }
+  
+  .right {
+    flex-grow: 2;
+  }
+  
+  .left .links {
+    display: block;
+  }
+  
+  .links-bottom {
+    display: none;
+  }
+}
+
+.links {
+  display: none;
+  color: black;
+  text-align: right;
+}
+
+.links-bottom {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.part {
+  text-align: left;
+  padding: 2rem;
+  color: white;
+}
+
+.left {
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.left h1 {
+  background: black;
+  color: white;
+}
+
+.right {
+}
+
+.description {
+  font-size: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+h1 {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  font-size: 1.5rem;
+  background: white;
+  color: black;
+  border-radius: 1.25rem;
+}
+
+.projects {
+  font-size: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.projects .project {
+  
+}
+
+.projects .project a {
+  text-decoration: none;
+  color: white;
+}
+
+.left .highlight {
+  white-space: nowrap;
+  display: inline-block;
+  border: solid 0.1rem black;
+  border-radius: 1.25rem;
+  padding: 0 1rem;
+}
+
+.right .highlight {
+  white-space: nowrap;
+  display: inline-block;
+  border: solid 0.1rem white;
+  border-radius: 1.25rem;
+  padding: 0 1rem;
+}
+
+.right .highlight:hover {
+  background-color: white;
+  color: black;
+}
+
+img {
+  margin-top: 2rem;
+  width: 100%;
+  border: solid 0.1rem white;
+}
+
+.fa-github {
+  height: 1rem;
+}
+
+.left .fa-github {
+  color: black;
+}
+
+.right .fa-github {
+  color: white;
+}
