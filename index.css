@@ -3,6 +3,8 @@
 * {
   margin: 0;
   padding: 0;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 ul {
@@ -16,7 +18,7 @@ body {
   font-size: 100%;
   background-color: #111;
 }
-
+/* 
 @media (min-width: 800px) {
   html, body {
     height: 100%;
@@ -45,7 +47,7 @@ body {
   .links-bottom {
     display: none;
   }
-}
+} */
 
 .links {
   display: none;
@@ -86,12 +88,16 @@ body {
 }
 
 h1 {
-  display: inline-block;
+  /* display: inline-block; */
   padding: 0.25rem 1rem;
   font-size: 1.5rem;
   background: white;
   color: #111;
   border-radius: 1.25rem;
+}
+
+p {
+  /* line-height: 3rem; */
 }
 
 .projects {
