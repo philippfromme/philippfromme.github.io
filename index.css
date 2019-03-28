@@ -1,155 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-weight: bold;
-  font-size: 2rem;
-}
-
-ul {
-  list-style: none;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Roboto', sans-serif;
-  font-size: 100%;
-  background-color: #111;
-}
-/* 
-@media (min-width: 800px) {
-  html, body {
-    height: 100%;
-  }
-  
-  body {
-    flex-direction: row;
-  }
-  
-  .part {
-    flex-basis: 0;
-  }
-  
-  .left {
-    flex-grow: 1;
-  }
-  
-  .right {
-    flex-grow: 2;
-  }
-  
-  .left .links {
-    display: block;
-  }
-  
-  .links-bottom {
-    display: none;
-  }
-} */
-
-.links {
-  display: none;
-  color: #111;
-  text-align: right;
-}
-
-.links-bottom {
-  text-align: right;
-  margin-top: 2rem;
-}
-
-.part {
-  text-align: left;
-  padding: 2rem;
+  background-color: black;
   color: white;
+  font-family: 'Roboto Mono', monospace;
+  padding: 16px;
 }
 
-.left {
-  background: white;
-  color: #111;
-  display: flex;
-  flex-direction: column;
+h3,
+p,
+ul {
+  margin: 16px;
 }
 
-.left h1 {
-  background: #111;
-  color: white;
+li {
+  list-style: none;
 }
 
-.right {
-}
-
-.description {
-  font-size: 2rem;
-  margin-top: 2rem;
-  text-align: left;
-}
-
-h1 {
-  /* display: inline-block; */
-  padding: 0.25rem 1rem;
-  font-size: 1.5rem;
-  background: white;
-  color: #111;
-  border-radius: 1.25rem;
-}
-
-p {
-  /* line-height: 3rem; */
-}
-
-.projects {
-  font-size: 2rem;
-  margin-top: 2rem;
-  text-align: left;
-}
-
-.projects .project {
-  
-}
-
-.projects .project a {
-  text-decoration: none;
-  color: white;
-}
-
-.left .highlight {
-  white-space: nowrap;
-  display: inline-block;
-  border: solid 0.1rem #111;
-  border-radius: 1.25rem;
-  padding: 0 1rem;
-}
-
-.right .highlight {
-  white-space: nowrap;
-  display: inline-block;
-  border: solid 0.1rem white;
-  border-radius: 1.25rem;
-  padding: 0 1rem;
-}
-
-.right .highlight:hover {
+.pill {
   background-color: white;
-  color: #111;
+  border-radius: 12px;
+  box-shadow: 12px 12px 12px white;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 12px;
+  text-decoration: none;
 }
 
-img {
-  margin-top: 2rem;
-  width: 100%;
-  border: solid 0.1rem white;
-}
-
-.fa-github {
-  height: 1rem;
-}
-
-.left .fa-github {
-  color: #111;
-}
-
-.right .fa-github {
-  color: white;
+.pill:hover {
+  box-shadow: 6px 6px 12px white;
 }
