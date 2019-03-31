@@ -4,34 +4,60 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background-color: black;
-  color: white;
+  color: #111;
+  display: flex;
+  flex-direction: row;
   font-family: 'Roboto Mono', monospace;
-  padding: 16px;
+  font-size: 16px;
+  height: 100%;
+  text-transform: uppercase;
 }
 
-h3,
-p,
-ul {
-  margin: 16px;
+p {
+  margin: 1rem;
 }
 
-li {
-  list-style: none;
+.left, .right {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 1rem;
 }
 
-.pill {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 12px 12px 12px white;
-  color: black;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 4px 12px;
-  text-decoration: none;
+.left {
+  background: white;
 }
 
-.pill:hover {
-  box-shadow: 6px 6px 12px white;
+.right {
+  background: blue;
+  color: white;
+}
+
+.left .link {
+  color: #111;;
+}
+
+.right .link {
+  color: white;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  background: white;
+  box-shadow: 0 0 1rem 1rem white;
+  border-radius: 100%;
+}
+
+@media (max-width: 480px) {
+  body {
+    flex-direction: column;
+  }
 }
