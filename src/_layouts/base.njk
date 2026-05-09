@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — Philipp Fromme</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+{%- set path = page.url | trim("/") %}
+<pre>
+<span class="prompt">visitor@philippfrom.me:~$</span> ls -l
+</pre>
+<pre class="tree">
+total {{ collections.blog.length | default(0) }}
+drwxr-xr-x 1 philippfromme 4096  <a href="/blog/">blog/</a>
+lrwxr-xr-x 1 philippfromme 4096  <a href="https://github.com/philippfromme" rel="noopener">github</a> <span class="dim">↗</span>
+lrwxr-xr-x 1 philippfromme 4096  <a href="https://mastodon.social/@philippfromme" rel="me noopener">mastodon</a> <span class="dim">↗</span>
+-rw-r--r-- 1 philippfromme 4096  <a href="/">README.txt</a>
+</pre>
+{%- if page.url.startsWith("/blog/") %}
+<pre>
+<span class="prompt">visitor@philippfrom.me:~$</span> cd blog
+<span class="prompt">visitor@philippfrom.me:~/blog$</span> ls -l
+</pre>
+<pre class="tree">
+{%- for post in collections.blog | reverse %}
+{%- if post.url != "/blog/" %}
+-rw-r--r-- 1 philippfromme 4096  <a href="{{ post.url }}">{{ post.data.title | lower | replace(" ", "-") }}.md</a>
+{%- endif %}
+{%- endfor %}
+</pre>
+{%- endif %}
+<pre class="output">
+{{ content | safe }}</pre>
+<pre class="prompt-footer">
+<span class="prompt">visitor@philippfrom.me:~$</span> <span class="cursor">█</span>
+</pre>
+</body>
+</html>

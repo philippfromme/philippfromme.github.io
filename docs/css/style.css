@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0;
+  padding: 1rem;
+  background: #000;
+  color: #fff;
+}
+
+pre {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+.prompt {
+  color: #888;
+}
+
+.dim {
+  color: #fff;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.tree {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.output {
+  min-height: 4rem;
+}
+
+.output p {
+  margin-bottom: 1em;
+}
+
+.prompt-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+h1, h2, h3, h4 {
+  font-size: inherit;
+  font-weight: bold;
+}
